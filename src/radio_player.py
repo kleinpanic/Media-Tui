@@ -38,7 +38,7 @@ class RadioPlayer:
         window.box()
         height, width = window.getmaxyx()
         # Title
-        title = "Internet Radio"
+        title = "RadioPlayer"
         window.addstr(1, (width - len(title)) // 2, title, curses.A_BOLD)
 
         # Display current station

@@ -189,27 +189,23 @@ class MediaDashboardApp:
                 self.draw_tiling()
 
     def main_loop(self):
-        # Main loop to keep the screen updated
         while True:
             key = self.stdscr.getch()
 
-            # Break out of loop if keypress handler requests it
             if self.handle_keypress(key):
                 break
 
-            # Periodically check playback status
             if self.monocle_mode and self.active_window is not None:
                 module = self.windows[self.active_window]
                 if module and hasattr(module, 'check_playback_status'):
                     module.check_playback_status()
 
-            # Redraw based on current mode
             if self.monocle_mode:
                 self.draw_monocle()
             else:
                 self.draw_tiling()
 
-            time.sleep(0.1)  # Adjust for responsiveness
+            time.sleep(0.1)  
 
 def main(stdscr):
     app = MediaDashboardApp(stdscr)
