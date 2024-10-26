@@ -1,0 +1,4 @@
+backups/
+local_music_debug.log 
+__pycache__/
+.cache

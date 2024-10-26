@@ -1,0 +1,8 @@
+psutil
+python-mpv
+curses-menu
+pymediainfo
+mutagen
+pillow
+spotipy
+python-dotenv
